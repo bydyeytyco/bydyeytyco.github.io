@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>lol30级礼包领取-新手等级奖励说明与领取注意事项</title>
+<meta name="description" content="整理英雄联盟30级礼包领取的相关说明，包括新手等级奖励的常见内容、领取入口、账号要求、常见问题与注意事项，帮助玩家理清领取流程与判断信息真伪。">
+<meta name="keywords" content="lol30级礼包领取,英雄联盟30级礼包,新手等级奖励,等级礼包领取,账号奖励">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+  :root{
+    --bg:#0b1220;
+    --bg-soft:#111c31;
+    --card:#152340;
+    --card-2:#1b2c4f;
+    --line:rgba(120,160,220,.22);
+    --gold:#e8c169;
+    --gold-soft:#f4dfa8;
+    --blue:#4f9df7;
+    --text:#e8eefb;
+    --muted:#9fb0cd;
+    --radius:14px;
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1100px 500px at 12% -8%, rgba(79,157,247,.20), transparent 60%),
+      radial-gradient(900px 420px at 92% 4%, rgba(232,193,105,.14), transparent 62%),
+      var(--bg);
+    color:var(--text);
+    font-family:"Microsoft YaHei","PingFang SC","Hiragino Sans GB",system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.75;
+    font-size:16px;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+
+  .wrap{
+    width:100%;
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 20px;
+  }
+
+  /* ---------- header ---------- */
+  .site-header{
+    position:sticky;
+    top:0;
+    z-index:60;
+    backdrop-filter:blur(10px);
+    background:rgba(11,18,32,.86);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    min-height:66px;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    letter-spacing:.5px;
+    white-space:nowrap;
+  }
+  .brand-mark{
+    width:34px;height:34px;
+    border-radius:9px;
+    background:linear-gradient(135deg,var(--gold),#b98f33);
+    color:#1a1204;
+    display:grid;place-items:center;
+    font-size:15px;font-weight:800;
+    box-shadow:0 4px 14px rgba(232,193,105,.35);
+  }
+  .brand-text{font-size:17px;}
+  .brand-text small{
+    display:block;
+    font-size:11px;
+    font-weight:400;
+    color:var(--muted);
+    letter-spacing:1.5px;
+  }
+  .main-nav{
+    display:flex;
+    align-items:center;
+    gap:4px;
+    flex-wrap:wrap;
+  }
+  .main-nav a{
+    padding:8px 13px;
+    border-radius:9px;
+    font-size:14.5px;
+    color:var(--muted);
+    transition:.2s;
+  }
+  .main-nav a:hover,.main-nav a.active{
+    color:var(--text);
+    background:rgba(79,157,247,.16);
+  }
+  .nav-cta{
+    padding:9px 16px !important;
+    border-radius:10px;
+    background:linear-gradient(135deg,var(--gold),#c99f3f);
+    color:#1a1204 !important;
+    font-weight:700;
+  }
+  .nav-cta:hover{filter:brightness(1.06);}
+
+  /* ---------- hero ---------- */
+  .hero{
+    padding:54px 0 40px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.35fr .95fr;
+    gap:36px;
+    align-items:center;
+  }
+  .tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+  .tag{
+    font-size:12.5px;
+    padding:4px 11px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    color:var(--gold-soft);
+    background:rgba(232,193,105,.08);
+  }
+  .hero h1{
+    font-size:clamp(26px,4vw,40px);
+    line-height:1.3;
+    margin:0 0 16px;
+    letter-spacing:.5px;
+  }
+  .hero h1 span{color:var(--gold);}
+  .hero p.lead{
+    color:var(--muted);
+    font-size:16.5px;
+    margin:0 0 22px;
+    max-width:640px;
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 22px;
+    border-radius:11px;
+    font-size:15px;
+    font-weight:700;
+    border:1px solid transparent;
+    cursor:pointer;
+    transition:.2s;
+  }
+  .btn-primary{
+    background:linear-gradient(135deg,var(--gold),#c99f3f);
+    color:#1a1204;
+    box-shadow:0 8px 22px rgba(232,193,105,.26);
+  }
+  .btn-primary:hover{transform:translateY(-1px);}
+  .btn-ghost{
+    border-color:var(--line);
+    color:var(--text);
+    background:rgba(255,255,255,.03);
+  }
+  .btn-ghost:hover{background:rgba(79,157,247,.14);}
+
+  .hero-panel{
+    background:linear-gradient(160deg,var(--card-2),var(--card));
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px;
+    box-shadow:var(--shadow);
+  }
+  .hero-panel h2{
+    font-size:15px;
+    margin:0 0 14px;
+    color:var(--gold-soft);
+    letter-spacing:1px;
+    font-weight:700;
+  }
+  .step-list{list-style:none;margin:0;padding:0;}
+  .step-list li{
+    display:flex;
+    gap:12px;
+    padding:11px 0;
+    border-bottom:1px dashed var(--line);
+    font-size:14.5px;
+    color:var(--muted);
+  }
+  .step-list li:last-child{border-bottom:0;}
+  .step-num{
+    flex:0 0 26px;height:26px;
+    border-radius:8px;
+    background:rgba(79,157,247,.18);
+    color:var(--blue);
+    font-size:13px;font-weight:700;
+    display:grid;place-items:center;
+  }
+
+  /* ---------- section ---------- */
+  section{padding:52px 0;}
+  .section-head{margin-bottom:26px;}
+  .section-head .eyebrow{
+    font-size:12.5px;
+    letter-spacing:2px;
+    color:var(--blue);
+    text-transform:uppercase;
+    font-weight:700;
+  }
+  .section-head h2{
+    font-size:clamp(21px,2.6vw,27px);
+    margin:8px 0 10px;
+  }
+  .section-head p{
+    color:var(--muted);
+    margin:0;
+    max-width:760px;
+    font-size:15px;
+  }
+
+  /* ---------- 奖励内容卡片 ---------- */
+  .reward-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:18px;
+  }
+  .reward-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px;
+    transition:.22s;
+  }
+  .reward-card:hover{
+    transform:translateY(-3px);
+    border-color:rgba(232,193,105,.45);
+  }
+  .reward-icon{
+    width:42px;height:42px;
+    border-radius:11px;
+    display:grid;place-items:center;
+    font-size:19px;
+    margin-bottom:14px;
+    background:rgba(79,157,247,.16);
+  }
+  .reward-card h3{
+    font-size:16.5px;
+    margin:0 0 8px;
+  }
+  .reward-card p{
+    margin:0;
+    color:var(--muted);
+    font-size:14.5px;
+  }
+
+  /* ---------- 领取流程 ---------- */
+  .flow{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:0;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    background:var(--bg-soft);
+  }
+  .flow-item{
+    padding:24px 22px;
+    border-right:1px solid var(--line);
+    position:relative;
+  }
+  .flow-item:last-child{border-right:0;}
+  .flow-item .idx{
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:var(--gold);
+  }
+  .flow-item h3{
+    font-size:16px;
+    margin:8px 0 8px;
+  }
+  .flow-item p{
+    margin:0;
+    font-size:14.5px;
+    color:var(--muted);
+  }
+
+  /* ---------- 列表 + 侧栏 ---------- */
+  .split{
+    display:grid;
+    grid-template-columns:1.6fr 1fr;
+    gap:30px;
+    align-items:start;
+  }
+  .article-list{display:flex;flex-direction:column;gap:16px;}
+  .article-item{
+    display:flex;
+    gap:18px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px;
+    transition:.2s;
+  }
+  .article-item:hover{border-color:rgba(79,157,247,.45);}
+  .article-item .art-icon{
+    flex:0 0 52px;height:52px;
+    border-radius:12px;
+    display:grid;place-items:center;
+    font-size:20px;
+    background:linear-gradient(140deg,rgba(79,157,247,.22),rgba(232,193,105,.16));
+  }
+  .article-item h3{
+    font-size:16.5px;
+    margin:0 0 7px;
+  }
+  .article-item p{
+    margin:0;
+    color:var(--muted);
+    font-size:14.5px;
+  }
+
+  .side-card{
+    background:var(--bg-soft);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px;
+    margin-bottom:18px;
+  }
+  .side-card h3{
+    font-size:15.5px;
+    margin:0 0 14px;
+    color:var(--gold-soft);
+  }
+  .check-list{list-style:none;margin:0;padding:0;}
+  .check-list li{
+    position:relative;
+    padding-left:24px;
+    margin-bottom:11px;
+    font-size:14.5px;
+    color:var(--muted);
+  }
+  .check-list li::before{
+    content:"✔";
+    position:absolute;
+    left:0;top:0;
+    color:#5ec98a;
+    font-size:13px;
+  }
+  .warn-list{list-style:none;margin:0;padding:0;}
+  .warn-list li{
+    position:relative;
+    padding-left:24px;
+    margin-bottom:11px;
+    font-size:14.5px;
+    color:var(--muted);
+  }
+  .warn-list li::before{
+    content:"!";
+    position:absolute;
+    left:2px;top:1px;
+    width:14px;height:14px;
+    border-radius:50%;
+    background:rgba(232,193,105,.2);
+    color:var(--gold);
+    font-size:11px;
+    font-weight:800;
+    display:grid;place-items:center;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq{display:flex;flex-direction:column;gap:12px;}
+  .faq-item{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+    overflow:hidden;
+  }
+  .faq-q{
+    width:100%;
+    text-align:left;
+    background:none;
+    border:0;
+    color:var(--text);
+    font-size:16px;
+    font-weight:700;
+    font-family:inherit;
+    padding:17px 20px;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:14px;
+  }
+  .faq-q .sign{
+    flex:0 0 22px;
+    color:var(--gold);
+    font-size:19px;
+    line-height:1;
+    transition:.25s;
+  }
+  .faq-item.open .faq-q .sign{transform:rotate(45deg);}
+  .faq-a{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .3s ease;
+  }
+  .faq-a p{
+    margin:0;
+    padding:0 20px 18px;
+    color:var(--muted);
+    font-size:14.8px;
+  }
+
+  /* ---------- 提示条 ---------- */
+  .notice{
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+    background:linear-gradient(120deg,rgba(232,193,105,.12),rgba(79,157,247,.10));
+    border:1px solid rgba(232,193,105,.35);
+    border-radius:var(--radius);
+    padding:22px;
+  }
+  .notice .n-icon{
+    flex:0 0 40px;height:40px;
+    border-radius:10px;
+    background:rgba(232,193,105,.2);
+    color:var(--gold);
+    display:grid;place-items:center;
+    font-size:19px;font-weight:800;
+  }
+  .notice h3{margin:0 0 8px;font-size:16.5px;}
+  .notice p{margin:0;color:var(--muted);font-size:14.8px;}
+
+  /* ---------- footer ---------- */
+  .site-footer{
+    border-top:1px solid var(--line);
+    background:rgba(8,13,24,.9);
+    padding:40px 0 26px;
+    margin-top:20px;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    gap:30px;
+    margin-bottom:26px;
+  }
+  .footer-grid h4{
+    font-size:15px;
+    margin:0 0 14px;
+    color:var(--gold-soft);
+  }
+  .footer-grid p{
+    color:var(--muted);
+    font-size:14px;
+    margin:0;
+  }
+  .footer-links{list-style:none;margin:0;padding:0;}
+  .footer-links li{margin-bottom:9px;}
+  .footer-links a{
+    color:var(--muted);
+    font-size:14px;
+    transition:.2s;
+  }
+  .footer-links a:hover{color:var(--gold);}
+  .footer-bottom{
+    border-top:1px solid var(--line);
+    padding-top:18px;
+    display:flex;
+    justify-content:space-between;
+    gap:14px;
+    flex-wrap:wrap;
+    color:#7d8dab;
+    font-size:13px;
+  }
+
+  /* ---------- 响应式 ---------- */
+  @media (max-width:960px){
+    .hero-grid{grid-template-columns:1fr;}
+    .split{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:680px){
+    .header-inner{flex-direction:column;align-items:flex-start;padding:12px 0;gap:10px;}
+    .main-nav{gap:2px;}
+    .main-nav a{padding:7px 10px;font-size:13.5px;}
+    .hero{padding:38px 0 30px;}
+    section{padding:38px 0;}
+    .flow-item{border-right:0;border-bottom:1px solid var(--line);}
+    .flow-item:last-child{border-bottom:0;}
+    .footer-grid{grid-template-columns:1fr;}
+    .article-item{flex-direction:column;gap:12px;}
+    .article-item .art-icon{flex:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">30</span>
+      <span class="brand-text">等级礼包指南
+        <small>LOL LEVEL REWARD</small>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#intro" class="active">礼包概览</a>
+      <a href="#rewards">奖励内容</a>
+      <a href="#flow">领取流程</a>
+      <a href="#notes">注意事项</a>
+      <a href="#faq">常见问题</a>
+      <a href="#faq" class="nav-cta">查看说明</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="tag-row">
+          <span class="tag">新手等级奖励</span>
+          <span class="tag">账号成长</span>
+          <span class="tag">领取说明</span>
+        </div>
+        <h1>lol30级礼包领取：<span>等级奖励怎么拿、去哪领</span></h1>
+        <p class="lead">
+          很多玩家在英雄联盟账号达到 30 级前后，会关心是否有对应的等级礼包可以领取。这里把常见的新手等级奖励形式、
+          领取入口、账号条件以及容易踩坑的地方整理成一份说明，帮助你判断自己是否符合条件，并知道该从哪里查看。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#flow">查看领取流程</a>
+          <a class="btn btn-ghost" href="#notes">先看注意事项</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <h2>领取前先确认这几点</h2>
+        <ul class="step-list">
+          <li><span class="step-num">1</span><span>账号等级是否已达到活动要求的门槛</span></li>
+          <li><span class="step-num">2</span><span>奖励是自动发放，还是需要手动在活动页领取</span></li>
+          <li><span class="step-num">3</span><span>活动是否有时间范围与区服限制</span></li>
+          <li><span class="step-num">4</span><span>领取后奖励发放到哪个角色或大区</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 概览 -->
+  <section id="intro">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Overview</div>
+        <h2>30 级礼包到底指什么</h2>
+        <p>
+          在英雄联盟里，账号等级提升会伴随一系列成长奖励，而“30 级”常被玩家当作一个重要节点。需要说明的是，
+          具体的奖励内容、名称和领取方式会随版本与运营活动调整，不同时期、不同区服可能并不一致，因此以下内容以
+          “常见形式与判断方法”为主，实际以游戏内和官方活动页面为准。
+        </p>
+      </div>
+
+      <div class="reward-grid">
+        <article class="reward-card">
+          <div class="reward-icon">🎁</div>
+          <h3>成长类奖励</h3>
+          <p>随着等级提升逐步解锁的经验加成、蓝色精粹或新手道具，通常与账号成长系统绑定。</p>
+        </article>
+        <article class="reward-card">
+          <div class="reward-icon">🧩</div>
+          <h3>新手任务奖励</h3>
+          <p>完成新手引导或阶段任务后发放的礼包，往往与等级节点同时出现，容易被误认为“30 级专属”。</p>
+        </article>
+        <article class="reward-card">
+          <div class="reward-icon">📅</div>
+          <h3>限时活动奖励</h3>
+          <p>运营活动期间面向新账号或回归账号开放的礼包，有明确的时间窗口，过期通常无法补领。</p>
+        </article>
+        <article class="reward-card">
+          <div class="reward-icon">🏆</div>
+          <h3>段位与排位相关</h3>
+          <p>部分奖励与排位资格或赛季结算相关，和单纯的等级礼包不是同一回事，需要区分清楚。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 奖励内容 -->
+  <section id="rewards" style="background:rgba(17,28,49,.55);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Rewards</div>
+        <h2>礼包里常见会出现哪些东西</h2>
+        <p>下面这些是新手等级奖励中比较常见的内容类型，具体数量与名称以实际活动说明为准，不要仅凭第三方截图判断。</p>
+      </div>
+
+      <div class="split">
+        <div class="article-list">
+          <article class="article-item">
+            <div class="art-icon">💰</div>
+            <div>
+              <h3>游戏内货币与精粹</h3>
+              <p>蓝色精粹、橙色精粹等是新手阶段最常见的一类奖励，用于解锁英雄或相关内容，通常直接发放到账号。</p>
+            </div>
+          </article>
+          <article class="article-item">
+            <div class="art-icon">🛡️</div>
+            <div>
+              <h3>英雄与皮肤体验</h3>
+              <p>部分礼包会包含英雄解锁或限时皮肤体验，注意区分“永久”和“期限”，避免误解奖励价值。</p>
+            </div>
+          </article>
+          <article class="article-item">
+            <div class="art-icon">✨</div>
+            <div>
+              <h3>经验加成与道具</h3>
+              <p>经验加成卡、双倍经验时段等，对升级速度有影响，使用前留意生效范围与有效时间。</p>
+            </div>
+          </article>
+          <article class="article-item">
+            <div class="art-icon">🎫</div>
+            <div>
+              <h3>活动兑换券与任务道具</h3>
+              <p>限时活动中常见的兑换凭证，需要在指定页面使用，过期后一般会失效，建议尽早处理。</p>
+            </div>
+          </article>
+        </div>
+
+        <aside>
+          <div class="side-card">
+            <h3>判断奖励是否真实</h3>
+            <ul class="check-list">
+              <li>来源是否为游戏内公告或官方活动页</li>
+              <li>是否需要提供账号密码、验证码</li>
+              <li>是否要求先付费或先充值才能领</li>
+              <li>是否通过陌生链接跳转到站外页面</li>
+            </ul>
+          </div>
+          <div class="side-card">
+            <h3>容易混淆的概念</h3>
+            <ul class="warn-list">
+              <li>等级奖励 ≠ 排位赛季奖励</li>
+              <li>新手任务奖励 ≠ 30 级专属礼包</li>
+              <li>限时活动礼包 ≠ 永久可领取</li>
+              <li>第三方代领 ≠ 官方发放</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 领取流程 -->
+  <section id="flow">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Process</div>
+        <h2>一般情况下的领取思路</h2>
+        <p>
+          由于不同活动的入口和规则不同，这里给出的是一套通用的排查顺序。按照这个顺序去核对，基本能判断出自己是否
+          有可领取的等级礼包，以及应该去哪里领取。
+        </p>
+      </div>
+
+      <div class="flow">
+        <div class="flow-item">
+          <div class="idx">STEP 01</div>
+          <h3>确认等级状态</h3>
+          <p>登录游戏查看当前账号等级，确认是否已经达到活动要求的门槛，以及是否在同一大区。</p>
+        </div>
+        <div class="flow-item">
+          <div class="idx">STEP 02</div>
+          <h3>查看游戏内入口</h3>
+          <p>优先在客户端内的活动中心、任务面板或成长系统里查找，官方奖励一般会有对应入口。</p>
+        </div>
+        <div class="flow-item">
+          <div class="idx">STEP 03</div>
+          <h3>核对活动规则</h3>
+          <p>阅读活动时间、区服范围、领取条件和发放方式，确认自己是否在覆盖范围内。</p>
+        </div>
+        <div class="flow-item">
+          <div class="idx">STEP 04</div>
+          <h3>按提示领取</h3>
+          <p>需要手动领取的按页面提示操作，自动发放的则留意游戏内邮件或奖励记录。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 注意事项 -->
+  <section id="notes" style="background:rgba(17,28,49,.55);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Notes</div>
+        <h2>领取时最需要注意的几件事</h2>
+        <p>等级礼包类信息在网络上传播较广，其中混杂了不少不准确甚至带有风险的内容，下面几点建议优先留意。</p>
+      </div>
+
+      <div class="split">
+        <div>
+          <div class="notice" style="margin-bottom:18px;">
+            <div class="n-icon">!</div>
+            <div>
+              <h3>不要向任何第三方提供账号密码</h3>
+              <p>
+                官方奖励不会要求你交出账号密码、短信验证码或进行扫码授权。凡是声称“代领 30 级礼包”并索要这些信息的，
+                都应直接拒绝，避免账号被盗或被用于违规操作。
+              </p>
+            </div>
+          </div>
+
+          <div class="notice" style="margin-bottom:18px;">
+            <div class="n-icon">⏰</div>
+            <div>
+              <h3>注意活动时间与区服限制</h3>
+              <p>
+                限时活动通常有明确的起止时间，部分活动还只针对特定区服或特定时间段注册的账号。领取前先确认时间窗口，
+                避免错过后再去找“补领方法”。
+              </p>
+            </div>
+          </div>
+
+          <div class="notice">
+            <div class="n-icon">🔍</div>
+            <div>
+              <h3>以官方信息为准</h3>
+              <p>
+                奖励名称、数量和发放方式都可能随版本变化。遇到不确定的信息时，优先查看游戏内公告与官方渠道说明，
+                不要轻信来源不明的截图或链接。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="side-card">
+            <h3>安全领取清单</h3>
+            <ul class="check-list">
+              <li>只在游戏客户端或官方页面操作</li>
+              <li>不点击陌生短信、私信里的领取链接</li>
+              <li>不为领取奖励支付任何“手续费”</li>
+              <li>不安装来路不明的“领取工具”</li>
+              <li>发现异常及时修改密码并反馈</li>
+            </ul>
+          </div>
+          <div class="side-card">
+            <h3>没收到奖励怎么办</h3>
+            <ul class="warn-list">
+              <li>先确认是否满足全部领取条件</li>
+              <li>检查游戏内邮件与奖励记录</li>
+              <li>确认奖励是否为延迟发放</li>
+              <li>通过官方客服渠道咨询</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">FAQ</div>
+        <h2>关于 30 级礼包领取的常见问题</h2>
+        <p>下面整理了玩家问得比较多的几个问题，回答以通用情况为主，具体仍以当前活动规则为准。</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-item">
+          <button class="faq-q" type="button">
+            <span>英雄联盟 30 级一定有礼包可以领吗？</span>
+            <span class="sign">+</span>
+          </button>
+          <div class="faq-a">
+            <p>
+              不一定。等级成长奖励和限时活动奖励是两套不同的机制，是否在 30 级有可领取的礼包，取决于当时的运营安排
+              和活动规则。建议以游戏内活动中心与官方公告为准。
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button">
+            <span>礼包是自动发放还是需要手动领取？</span>
+            <span class="sign">+</span>
+          </button>
+          <div class="faq-a">
+            <p>
+              两种都有可能。部分成长奖励会自动发放到账号或邮件，部分限时活动则需要在活动页面手动点击领取。
+              领取前先看清活动说明里的发放方式，避免误以为没发。
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button">
+            <span>换了区服还能领到原来的 30 级礼包吗？</span>
+            <span class="sign">+</span>
+          </button>
+          <div class="faq-a">
+            <p>
+              奖励通常与具体账号和大区绑定，换区后不一定能继承或补领。如果活动规则里写明了区服限制，建议按规则执行，
+              不要轻信“跨区代领”的说法。
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button">
+            <span>网上说的“30 级礼包兑换码”可信吗？</span>
+            <span class="sign">+</span>
+          </button>
+          <div class="faq-a">
+            <p>
+              需要谨慎对待。正规活动一般会通过官方渠道公布兑换方式，来源不明的兑换码可能是无效信息，甚至可能引导
+              你进入钓鱼页面。遇到需要输入账号信息的兑换页面，建议直接关闭。
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button">
+            <span>等级超过 30 级了还能补领吗？</span>
+            <span class="sign">+</span>
+          </button>
+          <div class="faq-a">
+            <p>
+              这取决于活动是否设置了补领机制。多数限时活动过期后无法补领，但部分成长类奖励会随等级推进持续发放。
+              如果确认自己符合条件却没收到，可以通过官方客服反馈。
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button">
+            <span>为什么别人有 30 级礼包，我却没有？</span>
+            <span class="sign">+</span>
+          </button>
+          <div class="faq-a">
+            <p>
+              常见原因包括：注册时间或区服不在活动范围内、未完成前置任务、活动已结束、奖励发放存在延迟等。
+              建议逐条核对活动规则，而不是直接认定“被漏发”。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>等级礼包指南</h4>
+        <p>
+          汇总英雄联盟等级奖励相关的常见问题与领取思路，帮助新手玩家理清账号成长过程中的奖励信息，
+          内容以通用说明为主，具体规则请以官方公告为准。
+        </p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul class="footer-links">
+          <li><a href="#intro">礼包概览</a></li>
+          <li><a href="#rewards">奖励内容</a></li>
+          <li><a href="#flow">领取流程</a></li>
+          <li><a href="#notes">注意事项</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>安全提示</h4>
+        <ul class="footer-links">
+          <li><a href="#notes">账号信息保护</a></li>
+          <li><a href="#notes">识别虚假领取页</a></li>
+          <li><a href="#faq">常见问题解答</a></li>
+          <li><a href="#top">返回顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>本站为信息整理类页面，与游戏官方无隶属关系，奖励规则请以官方公告为准。</span>
+      <span>© 2024 等级礼包指南</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var items = document.querySelectorAll('.faq-item');
+    items.forEach(function (item) {
+      var btn = item.querySelector('.faq-q');
+      var panel = item.querySelector('.faq-a');
+      if (!btn || !panel) return;
+      btn.addEventListener('click', function () {
+        var isOpen = item.classList.contains('open');
+        items.forEach(function (other) {
+          other.classList.remove('open');
+          var p = other.querySelector('.faq-a');
+          if (p) p.style.maxHeight = null;
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+        }
+      });
+    });
+
+    var navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        navLinks.forEach(function (l) { l.classList.remove('active'); });
+        if (!link.classList.contains('nav-cta')) {
+          link.classList.add('active');
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+  </html>
